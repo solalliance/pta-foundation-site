@@ -19,6 +19,17 @@ images/      画像(logo_yoko.png: 横ロゴ / logo_yoko_white.png: 白文字版
 GitHub Pages で公開しています。URL は Settings > Pages で確認できます。
 検索エンジンに登録されないよう、各ページに `noindex` を設定しています。
 
+## 更新時のルール(キャッシュ対策)
+
+クライアントのブラウザに古い CSS / JS が残らないよう、読み込みに `?v=日時` を付けています。
+**CSS や JS を変更したら、コミット前に必ず以下を実行してください**(全 HTML の版番号が更新されます)。
+
+```
+sh tools/bump-cache.sh
+```
+
+HTML だけの変更なら実行は不要です。新しい HTML を作るときは、既存ページの `<link>` / `<script>` をコピーすれば同じ版番号が付きます。
+
 ## 今後作成予定のページ
 
 - greeting.html（ご挨拶）
