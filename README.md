@@ -3,7 +3,7 @@
 静的HTML / CSS / JS で構成したサイトです。
 
 - 担当: 安田
-- 現状: トップページ（index.html）のみ。下層ページは今後、情報を入手しながら作成します。
+- 現状: トップページと下層ページ（優先度A: ご挨拶・沿革・ご寄付について・お問い合わせ）を作成済み。残りは情報を入手しながら作成します。
 
 ## 構成
 
@@ -30,13 +30,20 @@ sh tools/bump-cache.sh
 
 HTML だけの変更なら実行は不要です。新しい HTML を作るときは、既存ページの `<link>` / `<script>` をコピーすれば同じ版番号が付きます。
 
+## 作成済みのページ
+
+- index.html（トップ）
+- greeting.html（ご挨拶）
+- history.html（沿革）
+- donation.html（ご寄付について）※ WEB申込フォームのURL待ち
+- contact.html（お問い合わせ）※ フォームの送信先待ち（項目のみ配置）
+
+下層ページは `<body class="page-sub">` でヘッダーを常に白背景＋黒ロゴにし、最上部にページタイトル帯（`.page-hero`）を置いています。
+帯の背景写真は `style.css` の `.page-hero--{ページ名}` で指定しています（現在は仮の写真）。
+
 ## 今後作成予定のページ
 
-- greeting.html（ご挨拶）
 - organization.html（組織図）
-- history.html（沿革）
 - activation.html（単位PTA活性化事業）
 - reports.html（活動報告）
-- donation.html（ご寄付について）
 - news.html（お知らせ）
-- contact.html（お問い合わせ）
