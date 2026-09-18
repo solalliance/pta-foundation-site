@@ -1535,6 +1535,63 @@ button {
   text-align: center;
 }
 
+/* =========================
+   プライバシーポリシー（privacy.html）
+   ========================= */
+.policy-doc p {
+  margin: 0 0 12px;
+}
+
+.policy-doc__title {
+  margin: 36px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-neutral);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+
+.policy-doc__list {
+  margin: 0 0 12px;
+  padding-left: 1.5em;
+}
+
+.policy-doc__list li + li {
+  margin-top: 4px;
+}
+
+.policy-doc__contact {
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral);
+}
+
+.policy-doc__contact a,
+.contact-form__agree a {
+  color: var(--color-green-deep);
+  text-decoration: underline;
+}
+
+.policy-doc__date {
+  margin-top: 36px;
+  text-align: right;
+  color: var(--color-muted);
+}
+
+/* フッター：プライバシーポリシーへのリンク */
+.site-footer__policy {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+}
+
+.site-footer__policy a {
+  color: #e0f2f1;
+}
+
+.site-footer__policy a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .page-hero {
     padding: 72px 24px;
