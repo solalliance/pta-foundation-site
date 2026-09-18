@@ -265,6 +265,25 @@ button {
     opacity: 0;
   }
 
+  /* backdrop-filter があると fixed のドロワーがヘッダー内に閉じ込められるため、開いている間は外す */
+  .site-header.is-open {
+    backdrop-filter: none;
+  }
+
+  /* ドロワー表示中もハンバーガー（×）を押せるよう、ドロワーより前面に出す */
+  .site-header.is-open .site-header__inner {
+    z-index: 41;
+  }
+
+  .site-header.is-open .site-header__logo {
+    visibility: hidden;
+  }
+
+  .site-header.is-open .site-header__toggle {
+    color: var(--color-text);
+  }
+
+
   .site-header__inner {
     position: relative;
     z-index: 1;
