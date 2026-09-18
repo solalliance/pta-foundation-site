@@ -278,10 +278,34 @@ button {
   }
 
   .site-header__logo a {
-    font-weight: 700;
-    font-size: var(--fs-md);
-    letter-spacing: 0.04em;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+  }
+
+  .site-header__logo-img {
+    display: block;
+    height: 34px;
+    width: auto;
+  }
+
+  /* ヒーロー上（透過ヘッダー）では白文字版、スクロール後は黒文字版 */
+  .site-header__logo-img--dark {
+    display: none;
+  }
+
+  .site-header.is-scrolled .site-header__logo-img--white {
+    display: none;
+  }
+
+  .site-header.is-scrolled .site-header__logo-img--dark {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .site-header__logo-img {
+      height: 40px;
+    }
   }
 
 /* PC Nav */
@@ -375,8 +399,13 @@ button {
 }
 
 .drawer-nav__logo {
-  font-weight: 700;
   margin-bottom: 24px;
+}
+
+.drawer-nav__logo img {
+  display: block;
+  height: 36px;
+  width: auto;
 }
 
 .drawer-nav__list {
@@ -791,6 +820,13 @@ button {
 
   .footer-address p {
     margin: 0 0 4px;
+  }
+
+  .footer-address__logo img {
+    display: block;
+    height: 36px;
+    width: auto;
+    margin-bottom: 10px;
   }
 
   .footer-contact-link {

@@ -1,4 +1,4 @@
-# 北九州市PTA協議会教育財団 Webサイト
+# 一般財団法人 北九州教育財団 Webサイト
 
 静的HTML / CSS / JS で構成したサイトです。
 
@@ -11,7 +11,7 @@
 index.html   トップページ
 style.css    スタイル
 js/main.js   スクリプト
-images/      画像
+images/      画像(logo_yoko.png: 横ロゴ / logo_yoko_white.png: 白文字版・透過ヘッダーとフッター用 / favicon.png)
 ```
 
 ## 確認用URL（クライアント共有用）
