@@ -1062,6 +1062,19 @@ button {
   background-image: linear-gradient(135deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 30%)), url(images/school.jpg);
 }
 
+/* TODO: 写真差し替え */
+.page-hero--organization::before {
+  background-image: linear-gradient(135deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 30%)), url(images/org.jpg);
+}
+
+.page-hero--activation::before {
+  background-image: linear-gradient(135deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 30%)), url(images/step.jpg);
+}
+
+.page-hero--reports::before {
+  background-image: linear-gradient(135deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 30%)), url(images/team.jpg);
+}
+
 .page-hero__inner {
   position: relative;
   z-index: 1;
@@ -1536,6 +1549,158 @@ button {
 }
 
 /* =========================
+   組織図（organization.html）
+   ========================= */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.org-chart__box {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 20px;
+  border-radius: var(--radius-lg);
+  background-color: #ffffff;
+  border: 2px solid var(--color-green);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+/* 上下をつなぐ線 */
+.org-chart > .org-chart__box + .org-chart__row::before,
+.org-chart > .org-chart__row + .org-chart__box::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  width: 2px;
+  height: 32px;
+  background-color: var(--color-green);
+}
+
+.org-chart__row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.org-chart__box--top {
+  background-color: var(--color-green-deep);
+  border-color: var(--color-green-deep);
+  color: #ffffff;
+}
+
+.org-chart__box--main {
+  background-color: var(--color-green);
+  color: #ffffff;
+}
+
+.org-chart__box--side {
+  border-color: var(--color-orange);
+}
+
+.org-chart__name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.org-chart__text {
+  margin: 4px 0 0;
+  font-size: var(--fs-sm);
+}
+
+.org-chart__box--top .org-chart__text,
+.org-chart__box--main .org-chart__text {
+  color: #ffffff;
+}
+
+/* 役員名簿 */
+.member-table td {
+  text-align: left;
+}
+
+.data-table.member-table tbody th {
+  width: 7em;
+}
+
+.member-table__names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5em, 1fr));
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* =========================
+   活動報告（reports.html / activation.html）
+   ========================= */
+.report-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #dddddd;
+}
+
+.report-list__item {
+  padding: 18px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.report-list__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: var(--fs-sm);
+}
+
+.report-list__date {
+  color: var(--color-muted);
+}
+
+.report-list__label {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background-color: var(--color-green);
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+.report-list__title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.report-list__text {
+  margin: 4px 0 0;
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+}
+
+.table-caption {
+  margin: 32px 0 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+
+.data-table.schedule-table tbody th {
+  width: 55%;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* =========================
    プライバシーポリシー（privacy.html）
    ========================= */
 .policy-doc p {
@@ -1618,6 +1783,10 @@ button {
     width: 8em;
   }
 
+  .data-table.member-table tbody th {
+    width: 10em;
+  }
+
   .message {
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -1646,5 +1815,28 @@ button {
 
   .info-list__row dt {
     flex: 0 0 8em;
+  }
+
+  /* 理事会を中央に置き、監事は右側に添える */
+  .org-chart__box--side {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 160px + 40px);
+    transform: translateY(-50%);
+  }
+
+  /* 理事会と監事の横つなぎ */
+  .org-chart__box--main::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -42px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-orange);
+  }
+
+  .org-chart__box--side {
+    width: 200px;
   }
 }
