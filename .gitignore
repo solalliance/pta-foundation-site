@@ -4,3 +4,6 @@ Thumbs.db
 .vscode/
 .idea/
 .claude/
+
+# クライアント提供の元写真（サイト用は images/reports/ に書き出し済み）
+記事資料/

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>活動報告 | 一般財団法人 北九州教育財団</title>
+  <title>活性化事業報告 | 一般財団法人 北九州教育財団</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -30,7 +30,7 @@
           <li class="site-nav__item"><a href="organization.html">組織図</a></li>
           <li class="site-nav__item"><a href="history.html">沿革</a></li>
           <li class="site-nav__item"><a href="activation.html">単位PTA活性化事業</a></li>
-          <li class="site-nav__item"><a href="reports.html" aria-current="page">活動報告</a></li>
+          <li class="site-nav__item"><a href="reports.html">活動報告</a></li>
           <li class="site-nav__item"><a href="donation.html">ご寄付について</a></li>
         </ul>
       </nav>
@@ -55,7 +55,7 @@
           <li class="drawer-nav__item"><a href="organization.html">組織図</a></li>
           <li class="drawer-nav__item"><a href="history.html">沿革</a></li>
           <li class="drawer-nav__item"><a href="activation.html">単位PTA活性化事業</a></li>
-          <li class="drawer-nav__item"><a href="reports.html" aria-current="page">活動報告</a></li>
+          <li class="drawer-nav__item"><a href="reports.html">活動報告</a></li>
           <li class="drawer-nav__item"><a href="donation.html">ご寄付について</a></li>
         </ul>
       </div>
@@ -67,18 +67,18 @@
     <!-- =========================
          Page Hero
          ========================= -->
-    <!-- TODO: 写真差し替え（背景写真は style.css の .page-hero--reports で指定） -->
-    <section class="page-hero page-hero--reports">
+    <!-- TODO: 写真差し替え（背景写真は style.css の .page-hero--activation で指定） -->
+    <section class="page-hero page-hero--activation">
       <div class="page-hero__inner">
-        <p class="page-hero__en">REPORTS</p>
-        <h1 class="page-hero__title">活動報告</h1>
+        <p class="page-hero__en">ACTIVATION</p>
+        <h1 class="page-hero__title">活性化事業報告</h1>
       </div>
     </section>
 
     <nav class="breadcrumb" aria-label="パンくずリスト">
       <ol class="breadcrumb__list">
         <li><a href="index.html">トップ</a></li>
-        <li aria-current="page">活動報告</li>
+        <li aria-current="page">活性化事業報告</li>
       </ol>
     </nav>
 
@@ -88,11 +88,11 @@
     <section id="archive" class="section section--white">
       <div class="section__inner">
         <header class="section__head">
-          <h2 class="section__title">活動報告</h2>
-          <p class="section__lead">講演会や勉強会、会議など、財団の活動の様子をご紹介します。</p>
+          <h2 class="section__title">活性化事業報告</h2>
+          <p class="section__lead">単位PTA活性化事業として行われた、各校の取り組みをご紹介します。</p>
         </header>
 
-        <p class="news-sample-note">※ 記事本文はレイアウト確認用のダミーです。写真は実際の活動のものです。</p>
+        <p class="news-sample-note">※ 掲載中の記事は、レイアウト確認用のダミーです（各校からの報告・写真は未支給）。</p>
 
         <form class="archive-search" role="search" onsubmit="return false;">
           <div class="archive-search__row archive-search__row--keyword">
@@ -100,90 +100,103 @@
             <input class="archive-search__input" id="archive-keyword" type="search" data-archive-keyword placeholder="タイトル・カテゴリーから検索" autocomplete="off">
           </div>
           <div class="archive-search__row">
-            <label class="archive-search__label" for="archive-category">カテゴリー</label>
+            <label class="archive-search__label" for="archive-category">取り組み分野</label>
             <select class="archive-search__select" id="archive-category" data-archive-filter="category">
               <option value="">すべて</option>
-              <option value="会議">会議</option>
-              <option value="勉強会">勉強会</option>
-              <option value="理事会">理事会</option>
-              <option value="訪問">訪問</option>
-              <option value="講演会">講演会</option>
+              <option value="いじめ防止">いじめ防止</option>
+              <option value="ネット・情報">ネット・情報</option>
+              <option value="地域連携">地域連携</option>
+              <option value="学習支援">学習支援</option>
+              <option value="読書活動">読書活動</option>
             </select>
           </div>
           <div class="archive-search__row">
             <label class="archive-search__label" for="archive-year">年度</label>
             <select class="archive-search__select" id="archive-year" data-archive-filter="year">
               <option value="">すべて</option>
-              <option value="r8">令和8年度</option>
               <option value="r7">令和7年度</option>
+              <option value="r6">令和6年度</option>
             </select>
           </div>
         </form>
 
-        <p class="archive-count">全 <span data-archive-count>5</span> 件</p>
+        <p class="archive-count">全 <span data-archive-count>6</span> 件</p>
 
         <div class="card-grid" data-archive-list>
-          <article class="card" data-category="勉強会" data-year="r8" data-text="北九州市立大学の学生との勉強会を開催しました 勉強会 令和8年度 学生のみなさんと、これからの教育や地域の関わり方について意見を交わしました。">
-            <a href="report-univ-study.html">
+          <article class="card" data-category="地域連携" data-year="r7" data-text="【ダミー】地域と連携した防災学習 地域連携 令和7年度 地域防災士と連携した避難訓練と防災ワークショップを実施しました。">
+            <a href="activation-report-06.html">
               <div class="card__thumb">
-                <img src="images/reports/univ-study-01.jpg" alt="" loading="lazy">
+                <img src="images/k_01.jpg" alt="" loading="lazy">
               </div>
               <div class="card__body">
-                <p class="card__meta">2026.08.20 / 勉強会</p>
-                <h3 class="card__title">北九州市立大学の学生との勉強会を開催しました</h3>
-                <p class="card__text">学生のみなさんと、これからの教育や地域の関わり方について意見を交わしました。</p>
+                <p class="card__meta">2026.03.10 / 地域連携</p>
+                <h3 class="card__title">【ダミー】地域と連携した防災学習</h3>
+                <p class="card__text">地域防災士と連携した避難訓練と防災ワークショップを実施しました。</p>
               </div>
             </a>
           </article>
 
-          <article class="card" data-category="会議" data-year="r8" data-text="令和8年度 合同ミーティングを開催しました 会議 令和8年度 理事・評議員が一堂に会し、本年度の事業計画と各部会の取り組みを共有しました。">
-            <a href="report-joint-meeting.html">
+          <article class="card" data-category="読書活動" data-year="r7" data-text="【ダミー】読書活動を支える図書室環境づくり 読書活動 令和7年度 図書コーナーの整備と読み聞かせ会を行いました。">
+            <a href="activation-report-05.html">
               <div class="card__thumb">
-                <img src="images/reports/joint-meeting-01.jpg" alt="" loading="lazy">
+                <img src="images/k_02.jpg" alt="" loading="lazy">
               </div>
               <div class="card__body">
-                <p class="card__meta">2026.07.29 / 会議</p>
-                <h3 class="card__title">令和8年度 合同ミーティングを開催しました</h3>
-                <p class="card__text">理事・評議員が一堂に会し、本年度の事業計画と各部会の取り組みを共有しました。</p>
+                <p class="card__meta">2026.02.18 / 読書活動</p>
+                <h3 class="card__title">【ダミー】読書活動を支える図書室環境づくり</h3>
+                <p class="card__text">図書コーナーの整備と読み聞かせ会を行いました。</p>
               </div>
             </a>
           </article>
 
-          <article class="card" data-category="理事会" data-year="r8" data-text="理事会で「tano」のデモンストレーションを実施しました 理事会 令和8年度 理事会のなかで、子どもたちの学びに活用できる取り組みの紹介と実演を行いました。">
-            <a href="report-board-tano.html">
+          <article class="card" data-category="地域連携" data-year="r7" data-text="【ダミー】地域清掃ボランティア活動 地域連携 令和7年度 児童・保護者・地域住民が一緒になって清掃活動を行いました。">
+            <a href="activation-report-04.html">
               <div class="card__thumb">
-                <img src="images/reports/board-tano-01.jpg" alt="" loading="lazy">
+                <img src="images/k_03.jpg" alt="" loading="lazy">
               </div>
               <div class="card__body">
-                <p class="card__meta">2026.06.25 / 理事会</p>
-                <h3 class="card__title">理事会で「tano」のデモンストレーションを実施しました</h3>
-                <p class="card__text">理事会のなかで、子どもたちの学びに活用できる取り組みの紹介と実演を行いました。</p>
+                <p class="card__meta">2025.12.06 / 地域連携</p>
+                <h3 class="card__title">【ダミー】地域清掃ボランティア活動</h3>
+                <p class="card__text">児童・保護者・地域住民が一緒になって清掃活動を行いました。</p>
               </div>
             </a>
           </article>
 
-          <article class="card" data-category="訪問" data-year="r8" data-text="教育長・市議会議長を表敬訪問しました 訪問 令和8年度 財団の活動報告と今年度の取り組みについてご説明し、意見交換を行いました。">
-            <a href="report-visit-office.html">
+          <article class="card" data-category="ネット・情報" data-year="r7" data-text="【ダミー】ネットリテラシー向上講座 ネット・情報 令和7年度 スマートフォンとの付き合い方を、児童と保護者が一緒に学びました。">
+            <a href="activation-report-03.html">
               <div class="card__thumb">
-                <img src="images/reports/visit-office-01.jpg" alt="" loading="lazy">
+                <img src="images/c_01.jpg" alt="" loading="lazy">
               </div>
               <div class="card__body">
-                <p class="card__meta">2026.05.14 / 訪問</p>
-                <h3 class="card__title">教育長・市議会議長を表敬訪問しました</h3>
-                <p class="card__text">財団の活動報告と今年度の取り組みについてご説明し、意見交換を行いました。</p>
+                <p class="card__meta">2025.11.14 / ネット・情報</p>
+                <h3 class="card__title">【ダミー】ネットリテラシー向上講座</h3>
+                <p class="card__text">スマートフォンとの付き合い方を、児童と保護者が一緒に学びました。</p>
               </div>
             </a>
           </article>
 
-          <article class="card" data-category="講演会" data-year="r7" data-text="教育財団講演会「みんなで育てる未来のチカラ」を開催しました 講演会 令和7年度 齋藤 眞人 氏をお招きし、子どもたちの可能性を伸ばす関わり方についてお話しいただきました。">
-            <a href="report-lecture-saito.html">
+          <article class="card" data-category="学習支援" data-year="r7" data-text="【ダミー】家庭学習の習慣づくりプロジェクト 学習支援 令和7年度 家庭での学習時間を記録し、学校とPTAが一緒に振り返る取り組みです。">
+            <a href="activation-report-02.html">
               <div class="card__thumb">
-                <img src="images/reports/lecture-saito-01.jpg" alt="" loading="lazy">
+                <img src="images/c_02.jpg" alt="" loading="lazy">
               </div>
               <div class="card__body">
-                <p class="card__meta">2026.01.22 / 講演会</p>
-                <h3 class="card__title">教育財団講演会「みんなで育てる未来のチカラ」を開催しました</h3>
-                <p class="card__text">齋藤 眞人 氏をお招きし、子どもたちの可能性を伸ばす関わり方についてお話しいただきました。</p>
+                <p class="card__meta">2025.09.25 / 学習支援</p>
+                <h3 class="card__title">【ダミー】家庭学習の習慣づくりプロジェクト</h3>
+                <p class="card__text">家庭での学習時間を記録し、学校とPTAが一緒に振り返る取り組みです。</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-category="いじめ防止" data-year="r6" data-text="【ダミー】いじめ防止に向けた児童会との話し合い いじめ防止 令和6年度 児童会とPTAが一緒に、学校生活のルールについて話し合いました。">
+            <a href="activation-report-01.html">
+              <div class="card__thumb">
+                <img src="images/c_03.jpg" alt="" loading="lazy">
+              </div>
+              <div class="card__body">
+                <p class="card__meta">2025.06.12 / いじめ防止</p>
+                <h3 class="card__title">【ダミー】いじめ防止に向けた児童会との話し合い</h3>
+                <p class="card__text">児童会とPTAが一緒に、学校生活のルールについて話し合いました。</p>
               </div>
             </a>
           </article>

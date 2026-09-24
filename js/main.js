@@ -121,4 +121,47 @@ document.addEventListener("DOMContentLoaded", function () {
       revealObserver.observe(sec);
     });
   }
+
+  /* =========================
+     アーカイブ絞り込み（キーワード + セレクト）
+     ========================= */
+  const archiveList = document.querySelector("[data-archive-list]");
+  if (archiveList) {
+    const cards = Array.prototype.slice.call(archiveList.querySelectorAll("[data-text]"));
+    const keyword = document.querySelector("[data-archive-keyword]");
+    const selects = Array.prototype.slice.call(document.querySelectorAll("[data-archive-filter]"));
+    const countTarget = document.querySelector("[data-archive-count]");
+    const emptyMessage = document.querySelector("[data-archive-empty]");
+
+    function normalize(value) {
+      return (value || "").toLowerCase().trim();
+    }
+
+    function applyFilter() {
+      const terms = normalize(keyword ? keyword.value : "").split(/\s+/).filter(Boolean);
+      let shown = 0;
+
+      cards.forEach(function (card) {
+        const text = normalize(card.dataset.text);
+        const matchText = terms.every(function (term) {
+          return text.indexOf(term) !== -1;
+        });
+        const matchSelect = selects.every(function (select) {
+          return !select.value || card.dataset[select.dataset.archiveFilter] === select.value;
+        });
+        const show = matchText && matchSelect;
+        card.hidden = !show;
+        if (show) shown += 1;
+      });
+
+      if (countTarget) countTarget.textContent = shown;
+      if (emptyMessage) emptyMessage.hidden = shown !== 0;
+    }
+
+    if (keyword) keyword.addEventListener("input", applyFilter);
+    selects.forEach(function (select) {
+      select.addEventListener("change", applyFilter);
+    });
+    applyFilter();
+  }
 });
