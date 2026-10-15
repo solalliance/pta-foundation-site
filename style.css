@@ -508,6 +508,11 @@ button {
   font-weight: 700;
 }
 
+/* 見出しを文節単位で折り返す（文節の途中で改行しない） */
+.hero__phrase {
+  display: inline-block;
+}
+
 .hero__lead {
   margin: 0;
   font-size: var(--fs-md);
@@ -1883,6 +1888,72 @@ button {
 .article-nav__link.is-disabled {
   color: #bbbbbb;
   cursor: default;
+}
+
+/* 助成となる活動例（activation.html） */
+.support-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: support;
+}
+
+.support-list__item {
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background-color: #ffffff;
+  box-shadow: var(--shadow-soft);
+  counter-increment: support;
+}
+
+.support-list__title {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+
+.support-list__title::before {
+  content: counter(support);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-yellow), var(--color-orange-deep));
+  color: #3b2a00;
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+}
+
+.support-list__text {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+}
+
+/* カードの実施校 */
+.card__school {
+  margin: 0 0 6px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-green-deep);
+}
+
+/* 記事本文中の箇条書き */
+.article-list {
+  margin: 0 0 1em;
+  padding-left: 1.25em;
+}
+
+.article-list li + li {
+  margin-top: 8px;
 }
 
 /* =========================
